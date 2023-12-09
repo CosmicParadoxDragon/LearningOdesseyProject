@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Learning Odyssey</title>
+</head>
+    <body>
+        <script>
+            function toggleFoldable() {
+                var foldableContent = document.getElementById('foldableContent');
+                if (foldableContent.style.display === 'none') {
+                    foldableContent.style.display = 'block';
+                } else {
+                    foldableContent.style.display = 'none';
+                }
+            }
+        </script>
+
+        <header>
+            <div class="header-container">
+                <nav class="navbar">
+                    <a href="/" class="nav-branding"><h1>Learning Odyssey</h1><h6>Your Gateway to Knowledge</h6></a>
+                    
+                    <ul class="nav-menu">
+                        <li class="nav-link"><button class="nav-link-button"><a href="user_front_page.html">Home</a></button></li>
+                        <li class="nav-link"><button class="nav-link-button"><a href="courses.html">Courses</a></li>
+                        <li class="nav-link"><button class="nav-link-button"><a href="template_page.html">Link</a></li>
+                        <li class="nav-link"><button class="nav-link-button"><a href="template_page.html">Link</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="course-container">
+            <div class="content">
+                <h1>Welcome to Learning Odyssey</h1>
+                <div class="foldable-button" onclick="toggleFoldable()">
+                    <h2>Science</h2>
+                </div>
+
+                <div class="foldable-content" id="foldableContent">
+                    <ol>
+                        <li>
+                            <a href="basic_arithmetic.html"><strong>Basic Arithmetic:</strong></a> Arithmetic is the foundation of mathematics, involving operations like addition, subtraction, multiplication, and division.
+                        </li>
+                        <li>
+                            <a href="algebra.html"><strong>Algebra:</strong></a> Algebra deals with symbols and the rules for manipulating those symbols to solve equations and study patterns.
+                        </li>
+                        <li>
+                            <a href="geometry.html"><strong>Geometry:</strong></a> Geometry focuses on the properties and relationships of shapes, angles, and space.
+                        </li>
+                        <li>
+                            <a href="calculus.html"><strong>Calculus:</strong></a> Calculus studies change and motion, involving concepts like derivatives and integrals.
+                        </li>
+                        <li>
+                            <a href="statistics.html"><strong>Statistics:</strong></a> Statistics deals with data collection, analysis, and interpretation, including concepts like mean, median, and standard deviation.
+                        </li>
+                        <li>
+                            <a href="linear_algebra.html"><strong>Linear Algebra:</strong></a> Linear algebra explores vector spaces and linear equations, essential in fields like physics and computer graphics.
+                        </li>
+                        <li>
+                            <a href="differential_equations.html"><strong>Differential Equations:</strong></a> Differential equations describe change and are used in physics, engineering, and biology.
+                        </li>
+                        <li>
+                            <a href="quantum_mechanics.html"><strong>Quantum Mechanics:</strong></a> Quantum mechanics is a branch of physics that studies the behavior of particles on a very small scale.
+                        </li>
+                        <li>
+                            <a href="general_relativity.html"><strong>General Relativity:</strong></a> General relativity is Einstein's theory of gravity, describing how massive objects warp spacetime.
+                        </li>
+                        <li>
+                            <a href="number_theory.html"><strong>Number Theory:</strong></a> Number theory explores properties and relationships of integers, including prime numbers.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    </body>
+</html>

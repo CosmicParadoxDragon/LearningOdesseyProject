@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "refresh" content = "3; url=pages/user_front_page.html" />
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Learning Odessey</title>
+</head>
+
+<body>
+    <div class="flex-container">
+
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <input type="button" value="Login" onclick="authenticateUser()">
+        </form>
+    
+        <p id="loginStatus"></p>
+    
+        <script>
+            // Simple in-memory user storage (replace with a secure server-side solution)
+            const users = { 'test': 'password', 'user2': 'password2' };
+    
+            function authenticateUser() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const loginStatus = document.getElementById('loginStatus');
+    
+                if (users[username] && users[username] === password) {
+                    loginStatus.innerHTML = `Hello, ${username}! <a href="#" onclick="logout()">Logout</a>`;
+                
+                    window.location.href = 'pages/user_front_page.html'
+                } else {
+                    loginStatus.innerHTML = 'Invalid credentials. <a href="#" onclick="clearStatus()">Try again</a>';
+                }
+            }
+    
+            function logout() {
+                const loginStatus = document.getElementById('loginStatus');
+                loginStatus.innerHTML = 'You are not logged in. <a href="#" onclick="clearStatus()">Login</a>';
+            }
+    
+            function clearStatus() {
+                const loginStatus = document.getElementById('loginStatus');
+                loginStatus.innerHTML = '';
+            }
+        </script>
+
+    </div>
+</body>
+</html>
